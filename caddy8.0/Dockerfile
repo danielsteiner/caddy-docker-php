@@ -19,8 +19,6 @@ RUN xcaddy build \
   --with github.com/caddy-dns/cloudflare \
   --with github.com/caddyserver/ntlm-transport \
   --with github.com/chukmunnlee/caddy-openapi \
-  --with github.com/greenpau/caddy-auth-jwt \
-  --with github.com/greenpau/caddy-auth-portal \
   --with github.com/greenpau/caddy-trace \
   --with github.com/hairyhenderson/caddy-teapot-module \
   --with github.com/lolPants/caddy-requestid \
