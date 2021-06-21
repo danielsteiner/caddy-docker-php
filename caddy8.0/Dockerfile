@@ -1,6 +1,6 @@
-FROM caddy/caddy:2.3.0-builder-alpine AS builder
+FROM caddy/caddy:2.4.2-builder-alpine AS builder
 LABEL maintainer "Daniel Steiner <kontakt@danielsteiner.net>"
-LABEL org.opencontainers.image.version=v2.1.1-php8.0
+LABEL org.opencontainers.image.version=v2.4.2-php8.0
 LABEL org.opencontainers.image.title=Caddy
 LABEL org.opencontainers.image.description="a powerful, enterprise-ready, open source web server with automatic HTTPS written in Go - now with PHP 8.0"
 LABEL org.opencontainers.image.url=https://danielsteiner.net/docker/images/caddy
@@ -115,8 +115,7 @@ RUN apk --no-cache update \
   " \
   && NPROC=$(getconf _NPROCESSORS_ONLN) \
   && docker-php-ext-configure gd --enable-gd --with-freetype --with-jpeg --with-webp \
-  #    Install APCU
-  #    @see https://github.com/docker-library/php/issues/1029
+  && docker-php-ext-install zip \
   && mkdir -p /usr/src/php/ext/apcu  \
   && mkdir -p /usr/src/php/ext/amqp  \
   && mkdir -p /usr/src/php/ext/igbinary  \
