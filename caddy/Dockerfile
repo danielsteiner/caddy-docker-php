@@ -18,6 +18,7 @@ RUN xcaddy build \
   --with github.com/aksdb/caddy-cgi/v2 \
   --with github.com/caddy-dns/cloudflare \
   --with github.com/caddyserver/ntlm-transport \
+  --with github.com/caddyserver/forwardproxy@03a7df4bf7e807cb04f22fb647a6bd5daeb386d9 \
   --with github.com/chukmunnlee/caddy-openapi \
   --with github.com/greenpau/caddy-auth-jwt \
   --with github.com/greenpau/caddy-auth-portal \
